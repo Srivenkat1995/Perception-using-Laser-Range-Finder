@@ -1,0 +1,7 @@
+<launch>
+	<node name="stage" pkg="stage_ros" type="stageros"
+	      args="$(find lab2)/world/playground.world" />
+	<node name ="python_script" pkg = "lab2" type = "rviz_visualization.py" output = "screen" />
+
+	<node pkg="rviz" type="rviz" name="$(anon rviz)" args="-d $(env HOME)/.rviz/default.rviz" />
+</launch>
